@@ -2,19 +2,16 @@ import React, { useEffect, useState } from 'react';
 import BookCard from './BookCard';
 const Bookshelf = () => {
     const [bookshelf, setBookshelf] = useState([]);
-
     useEffect(() => {
         const storedBooks = JSON.parse(localStorage.getItem('bookshelf')) || [];
         setBookshelf(storedBooks);
     }, []);
-
     const removeBookFromShelf = (bookToRemove) => {
         const newBookshelf = bookshelf.filter(book => book.key !== bookToRemove.key);
         setBookshelf(newBookshelf);
         localStorage.setItem('bookshelf', JSON.stringify(newBookshelf));
     };
-
-    return (
+     return (
         <div className="bookshelf">
             <h2>My Bookshelf</h2>
             {bookshelf.length === 0 ? (

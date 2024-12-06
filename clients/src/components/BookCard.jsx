@@ -11,6 +11,5 @@ const BookCard = ({ book,year,edition, onAdd, onRemove,  }) => {
         </div>
     );
 };
-
 export default BookCard;
 
