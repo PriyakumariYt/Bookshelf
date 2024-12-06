@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #4d4b00;
+  padding: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/*------ booksearch css-------- */
+.book-search {
+  text-align: center;
+  margin-top: 2em;
+}
+input {
+  padding: 0.5em;
+  margin: 1em 0;
+  width: 50%;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.book-results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.welcome-message {
+  text-align: center;
+  margin-top: 2em;
+ 
+}
+.welcome-message h2{
+  color: #FFFFFF;
+padding-bottom: 10px;
+text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+font-weight: 700;
+}
+.welcome-message p{
+  color: #379b92;
+  font-size: 15px;
+  font-weight: 300;
+}
+@media (max-width: 1200px) {
+  .book-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/*--------------------- BOOKMark css---------------------------- */
+.bookshelf {
+  text-align: center;
+  margin-top: 2em;
+}
+.bookshelf h2{
+  color: #FFFFFF;
+
+  text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+}
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.book-card {
+  /* border: 1px solid #ccc; */
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: transform 0.3s;
+  background-color: #379b92;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+}
+.book-card h3{
+  color: aliceblue;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding-left: 20px;
+  font-style: italic;
+  text-align: left;
+
+ 
+}
+.book-card p{
+  font-family: "Roboto", sans-serif;
+  color: antiquewhite;
+  font-size: 15px;
+  opacity: 0.6;
+  text-align: left;
+  padding-left: 20px;
+ 
+}
+button {
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  background-color: #7bcfe4;
+  color: #282c34;
+  border: none;
+
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+ 
+}
+
+button:hover {
+  background-color: #21a1f1;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .book-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-grid {
+      grid-template-columns: 1fr;
+  }
+}
